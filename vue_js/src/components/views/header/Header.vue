@@ -7,7 +7,7 @@
                 <img :src="require('../../../../static/img/icon-menu.svg')" alt="">
             </div>
             <div>
-                <a href="index.html" class="nav__logo">
+                <a href="" class="nav__logo">
                     <img :src="require('../../../../static/img/command-symbol.png')" alt=""/>
                 </a>
             </div>
@@ -24,7 +24,7 @@
                         <a href="#" class="nav__link">SALE</a>
                     </li>
                     <li class="nav__item">
-                        <a href="credit.html" class="nav__link">CREDIT</a>
+                        <a @click="checkCurrentRoute($router, '/credit')" class="nav__link">CREDIT</a>
                     </li>
                     <li class="nav__item">
                         <a href="contacts.html" class="nav__link">CONTACTS</a>

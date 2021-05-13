@@ -64,7 +64,7 @@
             </div>
         </section>
         <div class="pricee">
-            <span class="pricee__title">$ 1199.00</span>
+            <span class="pricee__title">$ 1099.00</span>
             <button class="pricee__button">
                 Go to Shopping
             </button>
