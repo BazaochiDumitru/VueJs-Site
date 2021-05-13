@@ -6,7 +6,7 @@
         <img :src="require('../../../../static/img/icon-menu.svg')" alt="" />
       </div>
       <div>
-        <a href="" class="nav__logo">
+        <a @click="checkCurrentRoute($router, '/')" class="nav__logo">
           <img :src="require('../../../../static/img/command-symbol.png')" alt=""/>
         </a>
       </div>
@@ -105,6 +105,10 @@ export default {
 }
 
 .nav__toggle {
+  cursor: pointer;
+}
+
+.nav__logo {
   cursor: pointer;
 }
 

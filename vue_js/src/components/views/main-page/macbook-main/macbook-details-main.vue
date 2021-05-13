@@ -5,21 +5,34 @@
         <h1 class="home__title">MacBook Pro & Air M1</h1>
         <p class="home__description">
           The new Macbook Pro & Air with M1 processors built on ARM technology
-          offers new possibilities for development,<br/>
+          offers new possibilities for development,<br />
           navigation, and long-lasting battery life
         </p>
       </div>
 
       <div class="home__img">
         <!-- IMG -->
-        <img :src="require('../../../../../static/img/macbook.png')" class="macbook1" alt=""/>
-        <img :src="require('../../../../../static/img/mbp-silver.png')" class="macbook2" alt=""/>
+        <img
+          :src="require('../../../../../static/img/macbook.png')"
+          class="macbook1"
+          alt=""
+        />
+        <img
+          :src="require('../../../../../static/img/mbp-silver.png')"
+          class="macbook2"
+          alt=""
+        />
       </div>
 
       <div class="home__scroll">
-        <span class="home__scroll-text">Want? Scroll down for more information</span>
+        <span class="home__scroll-text"
+          >Want? Scroll down for more information</span
+        >
         <a href="#l-section">
-          <img :src="require('../../../../../static/img/bx-mouse.svg')" alt=""/>
+          <img
+            :src="require('../../../../../static/img/bx-mouse.svg')"
+            alt=""
+          />
         </a>
       </div>
     </section>
@@ -32,7 +45,7 @@
             <span class="details__initial">New</span>
             <h3 class="details__title">M1<span></span></h3>
             <p class="details__description">
-              technology<br/>
+              technology<br />
               arm processor
             </p>
           </div>
@@ -40,7 +53,7 @@
             <span class="details__initial">Until</span>
             <h3 class="details__title">24<span> h</span></h3>
             <p class="details__description">
-              battery with<br/>
+              battery with<br />
               a single charge
             </p>
           </div>
@@ -48,21 +61,27 @@
             <span class="details__initial">Alone</span>
             <h3 class="details__title">15<span> min</span></h3>
             <p class="details__description">
-              load equals<br/>
-              up to 3 hours from<br/>
+              load equals<br />
+              up to 3 hours from<br />
               audio
             </p>
           </div>
         </div>
 
         <div class="details__img2">
-          <img :src="require('../../../../../static/img/mackbook-4-removebg-preview.png')" class="macbooks" alt=""/>
+          <img
+            :src="
+              require('../../../../../static/img/mackbook-4-removebg-preview.png')
+            "
+            class="macbooks"
+            alt=""
+          />
         </div>
       </div>
     </section>
     <div class="pricee">
       <span class="pricee__title">$ 1099.00</span>
-      <button class="pricee__button">Go to Shopping</button>
+      <button @click="goToProduct()" class="pricee__button">Go to Shopping</button>
     </div>
   </main>
 </template>
@@ -70,6 +89,11 @@
 <script>
 export default {
   name: "MacbookPage",
+  methods: {
+    goToProduct() {
+      this.$router.push("/products");
+    },
+  },
 };
 </script>
 
@@ -325,10 +349,10 @@ export default {
     margin-top: 50px;
   }
 
-  .home {
+  /* .home {
     margin-top: 50px;
     margin-left: 50px;
-  }
+  } */
 
   .home__data {
     margin-bottom: 50px;
