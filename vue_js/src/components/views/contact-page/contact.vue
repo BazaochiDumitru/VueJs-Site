@@ -1,54 +1,62 @@
 <template>
   <div>
     <!-- Title page -->
-    <div class="credit"><h2>CREDIT</h2></div>
+    <div class="credit"><h2>CONTACTS</h2></div>
 
-    <!-- Image Credit -->
+    <!-- Image Contacts -->
     <div class="container__img">
-      <img src="https://enter.online/images/companies/1/credit/kredit(3).jpg" alt="" class="responsive"/>
+      <img src="https://enter.online/images/companies/1/Contacts/contacts_entr.webp" alt="" class="responsive"/>
     </div>
-    <!-- Leading companies -->
-    <section class="info1">
-      <div class="info1__container">
-        <h2>Leading Companies</h2>
-        <p>
-          Our company operates in partnership with several lending companies
-        </p>
+
+    <!-- Online Store -->
+    <section class="info3">
+      <div class="info3__container">
+        <h2>Online Store</h2>
         <ul>
-          <li>Easy Credit</li>
-          <li>Iute Credit</li>
-          <li>Microinvest</li>
-          <li>Easy Credit</li>
-          <li>Iute Credit</li>
-          <li>Microinvest</li>
+          <li>
+            <img :src="require('../../../../static/img/telephone.png')" alt=""/>
+            0(231) 4 44 44 / 068 123 456
+          </li>
+          <li>
+            <img :src="require('../../../../static/img/gmail.png')" alt=""/>
+            company@gmail.com
+          </li>
+          <li>
+            <img :src="require('../../../../static/img/clock.png')" alt=""/>
+            Work program: Monday-Friday: 8am-8pm, Saturday: 9am-8pm, Sunday:
+            9am-7pm
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- Type of credit -->
-    <section class="info2">
-      <div class="info2__container">
-        <h2>Type of credits</h2>
-        <p>There are several types of loans, but the most popular are:</p>
+    <!-- Service center -->
+    <section class="info4">
+      <div class="info4__container">
+        <h2>Service Center & Store Address</h2>
         <ul>
           <li>
-            <strong>Credit Zero</strong> - customer favorite, with this loan you
-            do not pay any more leu. We offer customers installments for
-            different products, whether it's smartphones, tablets with the best
-            features, or powerful laptops. The 0% credit can be taken for a
-            period of 6 to 18 months.
+            <img :src="require('../../../../static/img/placeholder.png')" alt=""/>
+            42 Dream House, Balti, Moldova
           </li>
           <li>
-            <strong>1% Credit</strong> - it is very simple. You will pay only 1%
-            more per month. For example: 6% for six months. 1% credit can be
-            taken for a period of 6 to 36 months.
+            <img :src="require('../../../../static/img/telephone.png')" alt=""/>
+            0(231) 4 44 44 / 068 123 456
           </li>
           <li>
-            <strong>Standard Credit 2%</strong> - this type of credit is offered
-            for the widest range of products in Enter stores. 2% credit can be
-            taken for a period of 6 to 36 months.
+            <img :src="require('../../../../static/img/gmail.png')" alt=""/>
+            company@gmail.com
+          </li>
+          <li>
+            <img :src="require('../../../../static/img/clock.png')" alt=""/>
+            Work program: Monday-Friday: 8am-8pm, Saturday: 9am-8pm, Sunday:
+            9am-7pm
           </li>
         </ul>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36710.46750896094!2d27.891060449999998!3d47.7612147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2s!4v1577443074188!5m2!1sru!2s"
+            style="width: 100%; height: 500px"
+        ></iframe>
       </div>
     </section>
 
@@ -83,12 +91,12 @@
 
 <script>
 export default {
-  name: "CreditPage",
+  name: "ContactPage",
 };
 </script>
 
 <style scoped>
-/*=====  Page Credit =====*/
+/*=====  Page CONTACTS =====*/
 div.credit h2 {
   margin: 100px 0 0 10%;
 }
@@ -104,7 +112,7 @@ div.container__img {
   max-width: 1900px;
 }
 
-.info1 {
+.info3 {
   background-color: #f8f8f8;
   margin: 10px 50px 50px 50px;
   padding: 50px;
@@ -114,14 +122,17 @@ div.container__img {
   box-shadow: 0 10px 6px -6px #777;
 }
 
-.info1__container ul {
-  list-style: circle;
+.info3__container ul {
   margin: 15px 0 0 50px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
 }
 
-.info2 {
+.info3__container ul li {
+  padding: 5px;
+}
+
+.info4 {
   background-color: #f8f8f8;
   margin: 10px 50px 50px 50px;
   padding: 50px;
@@ -131,9 +142,13 @@ div.container__img {
   box-shadow: 0 10px 6px -6px #777;
 }
 
-.info2__container ul li {
-  list-style: circle;
+.info4__container ul {
   margin: 15px 0 0 50px;
+  display: grid;
+  list-style: none;
+}
+
+.info4__container ul li {
   padding: 5px;
 }
 
