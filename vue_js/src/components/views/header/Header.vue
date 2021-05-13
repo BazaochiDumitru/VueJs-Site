@@ -41,7 +41,7 @@
         </ul>
       </div>
       <div class="header__cart cart" tabindex="0">
-        <a href="Cart.html" class="cart"><img :src="require('../../../../static/img/shopping-bag.svg')" alt=""/>
+        <a @click="checkCurrentRoute($router, '/cart')" class="cart"><img :src="require('../../../../static/img/shopping-bag.svg')" alt=""/>
           <span id="cartValue">0</span>
         </a>
       </div>
@@ -118,6 +118,7 @@ export default {
 }
 
 .cart a {
+  cursor: pointer;
   text-decoration: none;
 }
 
