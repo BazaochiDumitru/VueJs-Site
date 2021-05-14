@@ -293,11 +293,11 @@ h2 {
 }
 
 @media only screen and (max-width: 568px) {
-    h2 {
-  margin-top: 100px;
-  margin-left: 50px;
-  margin-bottom: 50px;
-}
+  h2 {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
   .card {
     text-align: center;
     font-family: sans-serif;
