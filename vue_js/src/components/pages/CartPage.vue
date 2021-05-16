@@ -1,19 +1,20 @@
 <template>
   <section>
     <Header />
-    <CartPage />
+    <CartPage/>
+    <PriceContainer/>
   </section>
 </template>
 
 <script>
 import Header from "@/components/views/header/Header";
-import CartPage from "@/components/views/cart-page/cart";
+import CartPage from "../views/cart-page/CartPage";
+import PriceContainer from "../views/cart-page/PriceContainer";
 
 export default {
   name: "MainPage",
   components: {
-    Header,
-    CartPage,
+    Header, CartPage, PriceContainer
   },
 };
 </script>

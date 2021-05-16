@@ -1,53 +1,46 @@
 <template>
-  <div>
-    <h2>Products</h2>
-    <section class="categories">
-      <div class="container__product">
-        <div class="card" id="cardItems">
-          <ProductItem
-            :key="product.id"
-            :product_data="product"
-            @addToCart="showResult"
-            v-for="product in PRODUCTS"
-          />
-        </div>
+  <article class="prod">
+    <div class="item-container" data-id="1">
+      <div class="card-item">
+        <img
+          :src="require(`../../../../static/img/${product_data.tag}.png`)"
+          alt=""
+          class="card-img"
+        />
+
+        <p class="item-name">{{ product_data.name }}</p>
+        <p class="item-description">{{ product_data.description }}</p>
       </div>
-    </section>
-  </div>
+      <h3 class="item-price">
+        Price : <span class="item-price-value">{{ product_data.price }}</span> $
+      </h3>
+      <em>
+        <button
+          class="product__btn btn add-cart"
+          @click="$emit('addToCart', product_data)"
+        >
+          Add to cart
+        </button>
+      </em>
+    </div>
+  </article>
 </template>
 
 <script>
-import { mapActions, mapGetters } from "vuex";
-import ProductItem from "./ProductItem";
-
 export default {
-  name: "Product",
-  components: {
-    ProductItem,
-  },
-  methods: {
-    ...mapActions(["GET_PRODUCTS", "ADD_CART", "INCREASE_QUANTITY"]),
-    showResult(product) {
-      const currProduct = { ...product, quantity: 1 };
-
-      if (this.$cart.inCart(this.CART, product))
-        this.INCREASE_QUANTITY(product);
-      if (!this.$cart.inCart(this.CART, product)) this.ADD_CART(currProduct);
+  name: "ProductItem",
+  props: {
+    product_data: {
+      type: Object,
+      default: () => ({}),
     },
-  },
-  computed: mapGetters(["PRODUCTS", "CART"]),
-  async mounted() {
-    await this.GET_PRODUCTS();
   },
 };
 </script>
 
 <style scoped>
-h2 {
-  margin-top: 100px;
-  margin-left: 100px;
-  margin-bottom: 50px;
-}
+/* Products Page */
+
 .container__product {
   width: 1244px;
   padding: 0 20px;
@@ -107,6 +100,7 @@ h2 {
   margin-top: 1rem;
   font-size: 0.95rem;
 }
+
 .item-description {
   text-align: justify;
   color: rgb(0, 0, 0);
@@ -163,6 +157,7 @@ h2 {
   .home {
     margin-left: 50px;
   }
+
   .card {
     text-align: center;
     font-family: sans-serif;
@@ -171,6 +166,7 @@ h2 {
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
+
   .container__product {
     width: 100%;
     padding: 0 20px;
@@ -183,6 +179,7 @@ h2 {
     /* margin-top: -20px; */
     margin-left: -10px;
   }
+
   .card {
     text-align: center;
     font-family: sans-serif;
@@ -191,6 +188,7 @@ h2 {
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
   }
+
   .container__product {
     width: 100%;
     padding: 0 20px;
@@ -207,6 +205,7 @@ h2 {
     grid-gap: 20px;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .container__product {
     width: 100%;
     padding: 0 20px;
@@ -215,11 +214,6 @@ h2 {
 }
 
 @media only screen and (max-width: 568px) {
-  h2 {
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-bottom: 50px;
-  }
   .card {
     text-align: center;
     font-family: sans-serif;
@@ -228,6 +222,7 @@ h2 {
     grid-gap: 20px;
     grid-template-columns: 1fr;
   }
+
   .container__product {
     width: 100%;
     padding: 0 20px;

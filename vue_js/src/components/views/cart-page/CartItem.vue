@@ -1,13 +1,253 @@
 <template>
-$END$
+  <li>
+    <div class="remove__btn" @click="REMOVE_PRODUCT(product_data)">
+      <em class="fas fa-times-circle remove__item"></em>
+    </div>
+    <div class="product__img">
+      <img :src="require(`../../../../static/img/${product_data.tag}.png`)" alt="">
+    </div>
+    <div class="product__name">
+      <span>{{product_data.name}}</span>
+    </div>
+    <div class="product__quantity">
+      <div @click="DECREASE_QUANTITY(product_data)">
+        <em class="fas fa-minus decrease__item"></em>
+      </div>
+
+      <span>{{product_data.quantity}}</span>
+      <div @click="INCREASE_QUANTITY(product_data)">
+        <em class="fas fa-plus increase__item"></em>
+      </div>
+
+    </div>
+    <div class="product__price">
+      $<span>{{product_data.price}}</span>
+    </div>
+  </li>
 </template>
 
 <script>
+import {mapActions} from "vuex";
+
 export default {
-name: "CartItem"
+  name: "CartItem",
+  props: {
+    product_data: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  methods: mapActions(['REMOVE_PRODUCT', 'INCREASE_QUANTITY', 'DECREASE_QUANTITY'])
 }
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-bottom: 100px;
+}
+
+.products-container {
+  max-width: 680px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.product-header {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 4px solid gray;
+  margin: 0 auto;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.products li {
+  margin-left: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+.product-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+}
+
+.remove__btn {
+  margin-top: 20px;
+  margin-left: -15px;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.product__img {
+  margin-left: 25px;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.product__name {
+  margin-top: 20px;
+  grid-area: 1 / 2 / 2 / 4;
+}
+
+.product__price {
+  margin-top: 20px;
+  grid-area: 1 / 5 / 2 / 6;
+}
+
+.product__quantity {
+  margin-top: 20px;
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+.product__img img {
+  width: 65px;
+}
+
+.basketTotalContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 2px solid gray;
+}
+
+.basketTotalTitle {
+  margin-left: 7%;
+  width: 25%;
+}
+
+.basketTotal {
+  width: 10%;
+}
+.product-title {
+  display: flex;
+  margin-left: 150px;
+  justify-content: flex-start;
+}
+.quantity {
+  display: flex;
+  margin-left: 210px;
+  justify-content: flex-start;
+}
+.price {
+  display: flex;
+  margin-left: 70px;
+  justify-content: flex-start;
+}
+
+.form-inline {
+  max-width: 800px;
+  padding: 30px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  display: flex;
+  flex-flow: column wrap;
+  /* align-items: center; */
+  align-items: stretch;
+}
+
+.form-inline h3 {
+  text-align: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline a {
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.form-inline a:hover {
+  background-color: royalblue;
+}
+
+@media screen and (max-width: 620px) {
+  .product__name {
+    margin-left: 15px;
+    grid-area: 1 / 1 / 2 / 4;
+  }
+
+  .product__img img {
+    display: none;
+  }
+  .basketTotalContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .basketTotal {
+    width: fit-content;
+  }
+  .product-title {
+    display: flex;
+    margin-left: 70px;
+    justify-content: flex-start;
+  }
+  .quantity {
+    display: flex;
+    margin-left: 100px;
+    justify-content: flex-start;
+  }
+  .price {
+    display: flex;
+    margin-left: 7px;
+    justify-content: flex-start;
+  }
+  .form-inline {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .form-inline {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
 
 </style>

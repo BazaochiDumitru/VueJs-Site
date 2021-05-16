@@ -51,6 +51,7 @@
 
 <script>
 import { checkCurrentRoute } from "@/router/routeCheck";
+import {mapGetters} from "vuex";
 
 export default {
   name: "Header",
@@ -63,6 +64,7 @@ export default {
       this.isToggled = !this.isToggled;
     },
   },
+  computed: mapGetters(['COUNT'])
 };
 </script>
 
