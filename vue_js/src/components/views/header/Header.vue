@@ -42,7 +42,7 @@
       </div>
       <div class="header__cart cart" tabindex="0">
         <a @click="checkCurrentRoute($router, '/cart')" class="cart"><img :src="require('../../../../static/img/shopping-bag.svg')" alt=""/>
-          <span id="cartValue">0</span>
+          <span id="cartValue">{{COUNT}}</span>
         </a>
       </div>
     </nav>
