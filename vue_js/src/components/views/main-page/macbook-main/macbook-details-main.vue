@@ -81,7 +81,9 @@
     </section>
     <div class="pricee">
       <span class="pricee__title">$ 1099.00</span>
-      <button @click="goToProduct()" class="pricee__button">Go to Shopping</button>
+      <button @click="goToProduct()" class="pricee__button">
+        Go to Shopping
+      </button>
     </div>
   </main>
 </template>

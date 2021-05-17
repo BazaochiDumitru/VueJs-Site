@@ -29,27 +29,36 @@
         <div class="footer-top__box">
           <h3>CONTACT US</h3>
           <div>
-              <span>
-                  <img :src="require('../../../../static/img/placeholder.png')" alt=""/>
-              </span>
+            <span>
+              <img
+                :src="require('../../../../static/img/placeholder.png')"
+                alt=""
+              />
+            </span>
             42 Dream House, Balti, Moldova
           </div>
           <div>
-              <span>
-               <img :src="require('../../../../static/img/gmail.png')" alt=""/>
-              </span>
+            <span>
+              <img :src="require('../../../../static/img/gmail.png')" alt="" />
+            </span>
             company@gmail.com
           </div>
           <div>
-              <span>
-              <img :src="require('../../../../static/img/telephone.png')" alt=""/>
-              </span>
+            <span>
+              <img
+                :src="require('../../../../static/img/telephone.png')"
+                alt=""
+              />
+            </span>
             +373 681 23 456
           </div>
           <div>
-              <span>
-               <img :src="require('../../../../static/img/paper-plane.png')" alt=""/>
-              </span>
+            <span>
+              <img
+                :src="require('../../../../static/img/paper-plane.png')"
+                alt=""
+              />
+            </span>
             Balti, Moldova
           </div>
         </div>
@@ -64,8 +73,8 @@
 
 <script>
 export default {
-  name: "Footer"
-}
+  name: "Footer",
+};
 </script>
 
 <style scoped>
@@ -408,6 +417,4 @@ export default {
     padding: 5px;
   }
 }
-
-
 </style>

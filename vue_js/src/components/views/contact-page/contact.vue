@@ -5,7 +5,11 @@
 
     <!-- Image Contacts -->
     <div class="container__img">
-      <img src="https://enter.online/images/companies/1/Contacts/contacts_entr.webp" alt="" class="responsive"/>
+      <img
+        src="https://enter.online/images/companies/1/Contacts/contacts_entr.webp"
+        alt=""
+        class="responsive"
+      />
     </div>
 
     <!-- Online Store -->
@@ -14,15 +18,18 @@
         <h2>Online Store</h2>
         <ul>
           <li>
-            <img :src="require('../../../../static/img/telephone.png')" alt=""/>
+            <img
+              :src="require('../../../../static/img/telephone.png')"
+              alt=""
+            />
             0(231) 4 44 44 / 068 123 456
           </li>
           <li>
-            <img :src="require('../../../../static/img/gmail.png')" alt=""/>
+            <img :src="require('../../../../static/img/gmail.png')" alt="" />
             company@gmail.com
           </li>
           <li>
-            <img :src="require('../../../../static/img/clock.png')" alt=""/>
+            <img :src="require('../../../../static/img/clock.png')" alt="" />
             Work program: Monday-Friday: 8am-8pm, Saturday: 9am-8pm, Sunday:
             9am-7pm
           </li>
@@ -36,26 +43,32 @@
         <h2>Service Center & Store Address</h2>
         <ul>
           <li>
-            <img :src="require('../../../../static/img/placeholder.png')" alt=""/>
+            <img
+              :src="require('../../../../static/img/placeholder.png')"
+              alt=""
+            />
             42 Dream House, Balti, Moldova
           </li>
           <li>
-            <img :src="require('../../../../static/img/telephone.png')" alt=""/>
+            <img
+              :src="require('../../../../static/img/telephone.png')"
+              alt=""
+            />
             0(231) 4 44 44 / 068 123 456
           </li>
           <li>
-            <img :src="require('../../../../static/img/gmail.png')" alt=""/>
+            <img :src="require('../../../../static/img/gmail.png')" alt="" />
             company@gmail.com
           </li>
           <li>
-            <img :src="require('../../../../static/img/clock.png')" alt=""/>
+            <img :src="require('../../../../static/img/clock.png')" alt="" />
             Work program: Monday-Friday: 8am-8pm, Saturday: 9am-8pm, Sunday:
             9am-7pm
           </li>
         </ul>
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36710.46750896094!2d27.891060449999998!3d47.7612147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2s!4v1577443074188!5m2!1sru!2s"
-            style="width: 100%; height: 500px"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36710.46750896094!2d27.891060449999998!3d47.7612147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2s!4v1577443074188!5m2!1sru!2s"
+          style="width: 100%; height: 500px"
         ></iframe>
       </div>
     </section>
@@ -64,25 +77,45 @@
     <div class="gradient">
       <ul class="social">
         <li>
-          <a href=""><img :src="require('../../../../static/img/facebook.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/facebook.png')" alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/vk-reproductor.png')" alt=""/></a>
+          <a href=""
+            ><img
+              :src="require('../../../../static/img/vk-reproductor.png')"
+              alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/instagram-logo.png')" alt=""/></a>
+          <a href=""
+            ><img
+              :src="require('../../../../static/img/instagram-logo.png')"
+              alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/telegram.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/telegram.png')" alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/pinterest.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/pinterest.png')" alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/twitter-sign.png')" alt=""/></a>
+          <a href=""
+            ><img
+              :src="require('../../../../static/img/twitter-sign.png')"
+              alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/youtube.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/youtube.png')" alt=""
+          /></a>
         </li>
       </ul>
     </div>

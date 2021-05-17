@@ -2,16 +2,29 @@
   <header class="l-header">
     <!-- Navigaation -->
     <nav class="nav bd-grid">
-      <div class="nav__toggle" :class="[isToggled ? 'show' : '']" @click="toggleMenu" id="nav-toggle">
+      <div
+        class="nav__toggle"
+        :class="[isToggled ? 'show' : '']"
+        @click="toggleMenu"
+        id="nav-toggle"
+      >
         <img :src="require('../../../../static/img/icon-menu.svg')" alt="" />
       </div>
       <div>
         <a @click="checkCurrentRoute($router, '/')" class="nav__logo">
-          <img :src="require('../../../../static/img/command-symbol.png')" alt=""/>
+          <img
+            :src="require('../../../../static/img/command-symbol.png')"
+            alt=""
+          />
         </a>
       </div>
       <!-- ===== NAV LIST ===== -->
-      <div class="nav__menu" :class="[isToggled ? 'show' : '']" @click="toggleMenu" id="nav-menu">
+      <div
+        class="nav__menu"
+        :class="[isToggled ? 'show' : '']"
+        @click="toggleMenu"
+        id="nav-menu"
+      >
         <ul class="nav__list">
           <li class="nav__item">
             <a @click="checkCurrentRoute($router, '/')" class="nav__link"
@@ -41,8 +54,12 @@
         </ul>
       </div>
       <div class="header__cart cart" tabindex="0">
-        <a @click="checkCurrentRoute($router, '/cart')" class="cart"><img :src="require('../../../../static/img/shopping-bag.svg')" alt=""/>
-          <span id="cartValue">{{COUNT}}</span>
+        <a @click="checkCurrentRoute($router, '/cart')" class="cart"
+          ><img
+            :src="require('../../../../static/img/shopping-bag.svg')"
+            alt=""
+          />
+          <span id="cartValue">{{ COUNT }}</span>
         </a>
       </div>
     </nav>
@@ -51,7 +68,7 @@
 
 <script>
 import { checkCurrentRoute } from "@/router/routeCheck";
-import {mapGetters} from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "Header",
@@ -64,7 +81,7 @@ export default {
       this.isToggled = !this.isToggled;
     },
   },
-  computed: mapGetters(['COUNT'])
+  computed: mapGetters(["COUNT"]),
 };
 </script>
 

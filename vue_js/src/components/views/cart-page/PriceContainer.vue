@@ -111,6 +111,12 @@ export default {
   methods: {
     ...mapActions(["CLEAR__CART"]),
     validateForm() {
+      const nameRegexp = /^[a-zA-Z ]{2,30}$/;
+      if (!new RegExp(nameRegexp).test(this.name)) {
+        alert("Wrong Name");
+        return;
+      }
+
       const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
       if (!new RegExp(emailRegexp).test(this.email)) {
         alert("Wrong Email");

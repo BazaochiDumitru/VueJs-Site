@@ -8,9 +8,10 @@
       </div>
       <ul class="products">
         <CartItem
-            :key="product.id"
-            :product_data="product"
-            v-for="product in CART"/>
+          :key="product.id"
+          :product_data="product"
+          v-for="product in CART"
+        />
       </ul>
     </div>
   </section>
@@ -18,14 +19,14 @@
 
 <script>
 import CartItem from "./CartItem";
-import {mapGetters} from "vuex";
+import { mapGetters } from "vuex";
 export default {
   name: "CartPage",
-  components : {
-    CartItem
+  components: {
+    CartItem,
   },
-  computed: mapGetters(['CART'])
-}
+  computed: mapGetters(["CART"]),
+};
 </script>
 
 <style scoped>
@@ -240,5 +241,4 @@ section {
     align-items: stretch;
   }
 }
-
 </style>

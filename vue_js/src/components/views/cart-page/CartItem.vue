@@ -4,41 +4,47 @@
       <em class="fas fa-times-circle remove__item"></em>
     </div>
     <div class="product__img">
-      <img :src="require(`../../../../static/img/${product_data.tag}.png`)" alt="">
+      <img
+        :src="require(`../../../../static/img/${product_data.tag}.png`)"
+        alt=""
+      />
     </div>
     <div class="product__name">
-      <span>{{product_data.name}}</span>
+      <span>{{ product_data.name }}</span>
     </div>
     <div class="product__quantity">
       <div @click="DECREASE_QUANTITY(product_data)">
         <em class="fas fa-minus decrease__item"></em>
       </div>
 
-      <span>{{product_data.quantity}}</span>
+      <span>{{ product_data.quantity }}</span>
       <div @click="INCREASE_QUANTITY(product_data)">
         <em class="fas fa-plus increase__item"></em>
       </div>
-
     </div>
     <div class="product__price">
-      $<span>{{product_data.price}}</span>
+      $<span>{{ product_data.price }}</span>
     </div>
   </li>
 </template>
 
 <script>
-import {mapActions} from "vuex";
+import { mapActions } from "vuex";
 
 export default {
   name: "CartItem",
   props: {
     product_data: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
-  methods: mapActions(['REMOVE_PRODUCT', 'INCREASE_QUANTITY', 'DECREASE_QUANTITY'])
-}
+  methods: mapActions([
+    "REMOVE_PRODUCT",
+    "INCREASE_QUANTITY",
+    "DECREASE_QUANTITY",
+  ]),
+};
 </script>
 
 <style scoped>
@@ -112,8 +118,13 @@ export default {
 }
 
 .product__quantity {
+  /* margin-top: 20px;
+  grid-area: 1 / 4 / 2 / 5; */
   margin-top: 20px;
-  grid-area: 1 / 4 / 2 / 5;
+  margin-left: 20px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .product__img img {
@@ -249,5 +260,4 @@ export default {
     align-items: stretch;
   }
 }
-
 </style>

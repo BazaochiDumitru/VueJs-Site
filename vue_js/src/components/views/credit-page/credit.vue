@@ -5,7 +5,11 @@
 
     <!-- Image Credit -->
     <div class="container__img">
-      <img src="https://enter.online/images/companies/1/credit/kredit(3).jpg" alt="" class="responsive"/>
+      <img
+        src="https://enter.online/images/companies/1/credit/kredit(3).jpg"
+        alt=""
+        class="responsive"
+      />
     </div>
     <!-- Leading companies -->
     <section class="info1">
@@ -56,25 +60,45 @@
     <div class="gradient">
       <ul class="social">
         <li>
-          <a href=""><img :src="require('../../../../static/img/facebook.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/facebook.png')" alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/vk-reproductor.png')" alt=""/></a>
+          <a href=""
+            ><img
+              :src="require('../../../../static/img/vk-reproductor.png')"
+              alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/instagram-logo.png')" alt=""/></a>
+          <a href=""
+            ><img
+              :src="require('../../../../static/img/instagram-logo.png')"
+              alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/telegram.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/telegram.png')" alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/pinterest.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/pinterest.png')" alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/twitter-sign.png')" alt=""/></a>
+          <a href=""
+            ><img
+              :src="require('../../../../static/img/twitter-sign.png')"
+              alt=""
+          /></a>
         </li>
         <li>
-          <a href=""><img :src="require('../../../../static/img/youtube.png')" alt=""/></a>
+          <a href=""
+            ><img :src="require('../../../../static/img/youtube.png')" alt=""
+          /></a>
         </li>
       </ul>
     </div>
@@ -147,8 +171,8 @@ div.container__img {
 
 .gradient img {
   margin-top: 50px;
-  height: 3.5%;
-  width: 3.5%;
+  height: 3%;
+  width: 3%;
 }
 
 ul.social li {
