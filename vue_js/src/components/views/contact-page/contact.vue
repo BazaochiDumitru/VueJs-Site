@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Title page -->
-    <div class="credit"><h2>CONTACTS</h2></div>
+    <div class="contact"><h2>CONTACTS</h2></div>
 
     <!-- Image Contacts -->
     <div class="container__img">
@@ -97,7 +97,7 @@ export default {
 
 <style scoped>
 /*=====  Page CONTACTS =====*/
-div.credit h2 {
+div.contact h2 {
   margin: 100px 0 0 10%;
 }
 
@@ -162,8 +162,8 @@ div.container__img {
 
 .gradient img {
   margin-top: 50px;
-  height: 3.5%;
-  width: 3.5%;
+  height: 3%;
+  width: 3%;
 }
 
 ul.social li {
